@@ -1,0 +1,20 @@
+[package]
+name = "ColibryOOBE"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Native GTK 4 widgets: the interface follows the real system theme
+# (forced to light Adwaita below) instead of custom rendering.
+gtk4 = "0.9"
+# Config serialization to JSON.
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# Argon2id password hashing for /etc/shadow-compatible PHC strings.
+argon2 = "0.5"
+# CSPRNG for salts and nonces.
+rand = "0.8"
+# AES-256-GCM encryption of the Wi-Fi password.
+aes-gcm = "0.10"
+base64 = "0.22"
+sha2 = "0.10"
